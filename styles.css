@@ -1,0 +1,95 @@
+/* Estilo Geral da Página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #4a148c;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+input[type="text"], select, button {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #4a148c;
+}
+
+button {
+    background-color: #4a148c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9800;
+}
+
+.link-box {
+    background-color: #f3e5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    word-break: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link-box a {
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+}
+
+.copy-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #ff9800;
+}
+
