@@ -1,14 +1,49 @@
-/* Estilo Geral da Página */
+/* Estilos gerais */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7fa;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
 }
 
+/* Estilo do cabeçalho e botões de navegação */
+header {
+    width: 100%;
+    background-color: #3a0d61; /* Cor alterada para um roxo mais escuro */
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav button {
+    background-color: #673ab7; /* Roxo mais suave */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #512da8;
+}
+
+/* Ajuste para a página com cabeçalho fixo */
 .container {
     background-color: #fff;
     padding: 30px 40px;
@@ -16,6 +51,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 400px;
     text-align: center;
+    margin-top: 120px; /* Ajuste para não sobrepor o cabeçalho */
 }
 
 h2 {
@@ -24,15 +60,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-.description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: center;
-    line-height: 1.5;
-}
-
-input[type="text"], select, button {
+input[type="text"], input[type="number"], select, button {
     width: 100%;
     padding: 12px 15px;
     margin: 10px 0;
@@ -44,7 +72,7 @@ input[type="text"], select, button {
     box-sizing: border-box;
 }
 
-input[type="text"]:focus, select:focus {
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
     border-color: #4a148c;
 }
 
@@ -53,43 +81,26 @@ button {
     color: #fff;
     border: none;
     cursor: pointer;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #ff9800;
 }
 
-.link-box {
-    background-color: #f3e5f5;
-    padding: 15px;
-    border-radius: 10px;
+h3 {
     margin-top: 20px;
-    word-break: break-word;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.link-box a {
     color: #4a148c;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-.link-box a:hover {
-    text-decoration: underline;
+/* Melhor separação entre seções */
+#converter, #calculator {
+    display: none;
 }
 
-.copy-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #4a148c;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#converter.active, #calculator.active {
+    display: block;
 }
-
-.copy-button:hover {
-    background-color: #ff9800;
-}
-
