@@ -1,4 +1,4 @@
-// Função para alternar entre o conversor e a calculadora com animação
+
 function showConverter() {
     document.getElementById("calculator").classList.add("fade-out");
     setTimeout(() => {
