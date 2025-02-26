@@ -6,16 +6,18 @@
     <title>Conversor e Calculadora</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body onload="showConverter()">
+<body>
+
     <header>
         <nav>
-            <button id="converterBtn" class="active" onclick="showConverter()">Conversor de Links</button>
-            <button id="calculatorBtn" onclick="showCalculator()">Calculadora de Preço</button>
+            <button onclick="showConverter()">Conversor de Links</button>
+            <button onclick="showCalculator()">Calculadora</button>
         </nav>
     </header>
-    
-    <div id="converter" class="container">
-        <h2>Conversor de Links Taobao / 1688 / Weidian</h2>
+
+    <!-- Conversor de Links aparece primeiro -->
+    <div id="converter" class="container active">
+        <h2>Conversor de Links</h2>
         <input type="text" id="originalLink" placeholder="Cola o link aqui">
         <select id="platform">
             <option value="cssbuy">CSSBuy</option>
@@ -24,18 +26,31 @@
         </select>
         <button onclick="convertLink()">Converter</button>
         <h3>Link Convertido:</h3>
-        <p id="convertedLink"></p>
+        <div id="convertedLink"></div>
     </div>
-    
-    <div id="calculator" class="container" style="display:none;">
+
+    <!-- Calculadora de Preço agora está oculta por padrão -->
+    <div id="calculator" class="container" style="display: none;">
         <h2>Calculadora de Preço</h2>
         <input type="number" id="productPrice" placeholder="Preço do Produto (€)">
         <input type="number" id="productWeight" placeholder="Peso do Produto (g)">
+        
+        <label>
+            <input type="checkbox" id="includeShipping">
+            Incluir Portes (€1.33)
+        </label>
+
+        <label>
+            <input type="checkbox" id="includePhoto">
+            Incluir Fotos (€0.30)
+        </label>
+        
         <button onclick="calculatePrice()">Calcular Preço</button>
         <h3>Resultado:</h3>
-        <p id="priceBreakdown"></p>
+        <div id="priceBreakdown"></div>
     </div>
-    
+
     <script src="script.js"></script>
+
 </body>
 </html>
